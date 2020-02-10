@@ -1,0 +1,528 @@
+@import '../partials/fonts';
+@import '../partials/mixins';
+@import '../partials/variables';
+
+*, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Avenir;
+    @include tablet {
+        width: 100%;
+    }
+}
+.comment {
+    &__title {
+        box-sizing: border-box;
+        padding: 32px 0 40px 16px;
+        @include tablet {
+            padding-left:24px ;
+        }
+        @include desktop {
+            padding-left: 60px;
+        }
+    }
+    &__nameTitle {
+        box-sizing: border-box;
+        padding-left: 74px;
+        @include tablet {
+            padding-left: 114px;
+        }
+        @include desktop {
+            padding-left: 405px;
+        }
+    }
+    &__text1 {
+        box-sizing: border-box;
+        display: flex;
+        padding: 0 16px 24px;
+        @include tablet {
+            padding-left: 64px;
+        }
+        @include desktop {
+            display: flex;
+            justify-content: center;
+        }
+        &--border {
+            border-radius: 4px;
+            width: 224px;
+            border: solid 4px black ;
+            margin-left: 14px;
+            box-sizing: border-box;
+            @include tablet {
+                width: 500px;
+            }
+        }
+    }
+    &__text2 {
+        box-sizing: border-box;
+        padding-left: 74px;
+        @include tablet {
+            padding-left: 114px;
+        }
+        @include desktop {
+            padding-left: 405px;
+        }
+        &--border {
+            box-sizing: border-box;
+            border-radius: 4px;
+            width: 224px;
+            display: block;
+            border: solid 1px #9e9d9d;
+            height: 100px;
+            @include tablet {
+                width: 500px;
+            }
+        }
+    }
+    &__text3 {
+        box-sizing: border-box;
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 124px;
+        }
+        @include desktop {
+            padding-right: 295px;
+        }
+    }
+    &__button {
+        box-sizing: border-box;
+        background-color: #323232;
+        color: white;
+        height: 48px;
+        border-radius: 4px;
+        border: none;
+        width: 224px;
+        align-items: center;
+        margin: 32px 0 32px 74px;
+    }
+    &__default {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__comment {
+            box-sizing: border-box;
+            box-sizing: border-box;
+            width: 288px;
+            margin: 20px;
+            border-bottom: 1px solid black;
+            display: flex;
+            @include tablet {
+                width: 600px;
+            }
+            &--icon {
+                background-color: rgb(231, 193, 123);
+                height: 40px;
+                width: 45px;
+                border-radius: 50%;
+            }
+            &-style {
+                display: flex;
+                padding: 0 10px;
+            }
+            &-styledate {
+                display: flex;
+                justify-content: flex-end;
+                width: 100px;
+            }
+            &-style1 {
+                box-sizing: border-box;
+                padding: 10px;
+            }
+            &-style2 {
+                font-size: 14px;
+                font-weight: 900;
+            }
+        }
+        &__commentss{
+            display: flex;
+        }
+    }
+}
+
+.icon__image {
+    border-radius: 50%;
+    height: 40px;
+    width: 45px;
+}
+
+.header {
+    background-color: #323232;
+}
+.hero {
+    background-image: url("../assets/Images/hero1.png");
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 11.4375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    @include tablet {
+        height: 25rem;
+    }
+    @include desktop {
+        height: 41.875rem;
+    }
+    &__title {
+        color: #ffffff;
+        padding-left: 1.875rem;
+        align-content: center;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        @include tablet {
+            padding-left: 1.5rem;
+            font-size: 4em;
+        }
+        @include desktop {
+            padding-left: 11.25rem;
+            font-size: 3.75rem;
+        }
+    }
+    &__overlay {
+        opacity: .5;
+        background-color: black;
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+    }
+}
+.test {
+    border-radius: 50%;
+    background-color: red;
+    height: 200px;
+    width: 200px;
+}
+.main {
+    &__sub {
+        &--color {
+            color: #323232;
+            padding: 2rem 1rem 1.5rem;
+            box-sizing: border-box;
+            @include tablet {
+                padding-left: 1.5rem;
+                font-size: 2.25rem;
+            }
+            @include desktop {
+                padding: 3rem 11.25rem;
+                font-size: 2.25rem;
+            }
+        }
+        &--image{
+            width: 90%;
+            padding: 0 5%;
+            height: auto;
+            @include tablet {
+                height: 22.625rem;
+                width: 45rem;
+                padding: 0 1.5rem;
+            }
+            @include desktop {
+                height: 28.125rem;
+                width: 56rem;
+                padding: 0 9.5rem 3rem;
+            }
+        }
+        &--text {
+            &-color {
+                color: #323232;
+            }
+            &-flex {
+                @include desktop {
+                    display: flex;
+                    box-sizing: border-box;
+                    padding: 0 9.5rem;
+                }
+            }
+        }
+        &--padding {
+            padding: 1.5rem 1rem 2rem;
+            @include box-text;
+            @include tablet {
+                padding-left: 1.5rem;
+            }
+            @include desktop {
+                padding: 0 0 2.5rem 9.5rem;
+                width: 80%;
+                font-size: 1.5625rem;
+            }
+        }
+        &--padding2 {
+            @include box-text;
+            padding: 0 1rem 2.5rem;
+            @include tablet {
+                padding-left: 1.5rem;
+            }
+            @include desktop {
+                padding: 0 0 3.5rem 9.5rem;
+            }
+        }
+        &--padding3 {
+            @include box-text;
+            padding: 0 1rem 1.5rem;
+            @include tablet {
+                padding-left: 1.5rem;
+            }
+            @include desktop {
+                padding: 0 0 2rem 9.5rem;
+            }
+        }
+        &--padding4 {
+            box-sizing: border-box;
+            padding: 1.5rem 1rem 2rem;
+            @include tablet {
+                padding-left: 1.5rem;
+            }
+            @include desktop {
+                padding: 0 0 3rem 0;
+            }
+        }
+        &--padding5 {
+            box-sizing: border-box;
+            padding: 0 1rem 2.5rem;
+            @include tablet {
+                padding-left: 1.5rem;
+            }
+            @include desktop {
+                padding: 0 0 3rem 2.5rem;
+            }
+        }
+        
+    }
+
+    &__photo {
+        background-color: #FAFAFA;
+        
+        &-test {
+            display: flex;
+            flex-direction: column;
+            @include tablet {
+                display: flex;
+                flex-flow: wrap;
+            }
+            @include desktop {
+                box-sizing: border-box;
+                padding: 0 0 1rem 3.75rem;
+            }
+        }
+        &--title {
+            padding: 2rem 1rem 1.5rem;
+            box-sizing: border-box;
+            color: #323232;
+            @include tablet {
+                padding: 2.5rem 1.5rem;
+                font-size: 2.25rem;
+            }
+            @include desktop {
+                padding: 3rem 0 4rem 11.25rem;
+                font-size: 2.25rem;
+            }
+        }
+        &--gallery-1 {
+            width: 90%;
+            padding: 0 5% 5%;
+            height: auto;
+            filter: grayscale(100%);
+            &:hover {
+                filter: grayscale(0%);
+                transition: transform .5s;
+                transform: scale(1.05);
+            }
+            @include tablet {
+                height: 7.875rem;
+                width: 14rem;
+                padding:0 0 1.5rem 1.5rem;
+            }
+            @include desktop {
+                height: 12.0625rem;
+                width: 21.5rem;
+                padding: 0 1.5rem 1.5rem 0;
+            }
+        }
+        &--gallery-2 {
+            padding-bottom: 1.875rem;
+            @include tablet {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+.header {
+    height: 5rem;
+    &-test1{
+        height: 100%;
+        @include tablet {
+            display: flex;
+            width:60%;
+        }
+    }
+    &__logo {
+        width: 6.25rem;
+        display: flex;
+        margin: auto;
+        padding: 1rem;
+        @include tablet {
+            width: 9.375rem;
+            padding: 0;
+            height: 5rem;
+        }
+        @include desktop {
+            margin-left: 11.25rem;
+            padding: 0;
+            height: 5rem;
+            width: 11.25rem;
+        }
+        &-link {
+            width: 100%;
+        }
+    }
+    &__nav {
+        @include tablet {
+            display: flex;
+        }
+        &--list {
+            display: flex;
+            list-style-type: none;
+            text-align: center;
+        }
+        &--list-1 {
+            border-bottom: white solid 5px;
+            padding-bottom: 0.4375rem;
+            @include tablet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 0;
+                margin: 0 1.25rem 0;
+            }
+            @include desktop {
+                width: 5rem;
+                margin: 0 3.5rem 0;
+            }
+        }
+        &--list-2 {
+            @include tablet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 0;
+                margin: 0 1.25rem 0;
+            }
+            @include desktop {
+                width: 5rem;
+                margin: 0;
+            }
+        }
+        &--textdecor {
+            color: white;
+            text-decoration: none;
+        }
+        &--silver {
+            color: #AFAFAF;
+        }
+    }
+}
+.footer {
+    background-color: #323232;
+    @include tablet {
+        padding-top: 2.5rem;
+    }
+    @include desktop {
+        padding-top: 3rem;
+    }
+    &__sec {
+        @include tablet {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            background-image: url(../assets/Logo/Logo-bandsite.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+            width: 93.75%;
+            margin-left: 1.5rem;
+        }
+        @include desktop {
+            width: 90%;
+            margin-left: 3.75rem;
+            background-size: 11.25rem 1.5rem;
+        }
+    }
+    &__title {
+        color: #ffffff;
+        padding: 1.875rem 0.5rem 0;
+        box-sizing: border-box;
+        @include tablet {
+            padding: 0;
+            width: 35%;
+            font-size: 2.375rem;
+        }
+    }
+    &__icon {
+        width: 1rem;
+        height: 1rem;
+        padding: 1.25rem 1rem 0;
+        @include tablet {
+            padding: 0 1.25rem;
+        }
+        @include desktop {
+            padding: 0 2rem;
+        }
+    }
+    &__text {
+        @include tablet {
+            display: flex;
+            padding: 1.875rem 1.5rem;
+            box-sizing: border-box;
+        }
+        @include desktop {
+            padding: 2rem 3.75rem 2.5rem;
+        }
+        &-band {
+            color: #FAFAFA;
+            &--padding {
+                box-sizing: border-box;
+                padding: 1.25rem 0.5rem 0;
+                @include tablet {
+                    padding: 1.25rem 0 0;
+                }
+                @include desktop {
+                    padding: 1.5rem 0 0;
+                }
+            }
+            &--large {
+                width: 100%;
+                font-weight: 900;
+            }
+            &--small {
+                width: 100%;
+            }
+        }
+    }
+    &__copyright {
+        color: #ffffff;
+        padding-bottom: 3.75rem;
+        @include tablet {
+            display: flex;
+            padding-left: 1.5rem;
+        }
+        @include desktop {
+            padding: 0 0 2.5rem 3.75rem;
+        }
+        &--text {
+            width: 100%;
+            @include tablet {
+                width: 15rem;
+            }
+        }
+    }
+    
+}
